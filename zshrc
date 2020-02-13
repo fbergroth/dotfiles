@@ -135,7 +135,7 @@ zstyle ':completion:*:*:kill:*' insert-ids single
 # Utilities
 
 _virtualenv_auto_activate () {
-  activate=((../)#.venv/bin/activate(N:a))
+  activate=((Y../)#.venv/bin/activate(N:a))
   [[ -n "$VIRTUAL_ENV" && "${activate:h:h}" != "$VIRTUAL_ENV" ]] && deactivate
   [[ -z "$VIRTUAL_ENV" && -n "$activate" ]] && source "$activate"
 }
