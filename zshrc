@@ -34,6 +34,7 @@ eval $(dircolors -b ~/.zsh/LS_COLORS/LS_COLORS)
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-fzy/zsh-fzy.plugin.zsh
+source ~/.zsh/z/z.sh
 
 # Keys
 
