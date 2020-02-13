@@ -50,6 +50,7 @@ alias ls='ls --color=auto --group-directories-first'
 alias l='ls -1A'
 alias ll='ls -lh'
 alias lr='ll -R'
+alias ..='cd ..'
 
 # Completion
 
