@@ -1,6 +1,14 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
 - clean: ['~']
 
 - link:
+    ~/.config/git/config: git/config
+    ~/.config/git/ignore: git/ignore
+
     ~/.p10k.zsh:
     ~/.zsh:
     ~/.zshrc:
