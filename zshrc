@@ -51,6 +51,8 @@ alias l='ls -1A'
 alias ll='ls -lh'
 alias lr='ll -R'
 alias ..='cd ..'
+alias df='df -kh'
+alias du='du -kh'
 
 # Completion
 
