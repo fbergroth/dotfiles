@@ -2,8 +2,24 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Wizard options: nerdfont-complete + powerline, small icons, lean, time, 1 line,
 source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme
-source ~/.p10k.zsh
+source ~/.zsh/powerlevel10k/config/p10k-lean.zsh
+typeset -g POWERLEVEL9K_VISUAL_IDENTIFIER_EXPANSION='${P9K_VISUAL_IDENTIFIER// }'
+typeset -g POWERLEVEL9K_DIR_CLASSES=()
+typeset -g POWERLEVEL9K_TIME_VISUAL_IDENTIFIER_EXPANSION=
+typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=2
+typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir prompt_char)
+typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
+  status
+  command_execution_time
+  background_jobs
+  kubecontext
+  gcloud
+  virtualenv
+  time
+)
+
 
 HISTFILE="$HOME/.zhistory"
 HISTSIZE=10000000
