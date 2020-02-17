@@ -162,6 +162,7 @@ eval $(dircolors -b ~/.zsh/LS_COLORS/LS_COLORS)
 source ~/.zsh/z/z.sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-fzy/zsh-fzy.plugin.zsh
+zstyle ':fzy:file' command rg --files
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Local Variables:
