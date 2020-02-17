@@ -28,14 +28,6 @@ export LESS_TERMCAP_so=$'\E[00;47;30m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
-# External
-
-eval $(dircolors -b ~/.zsh/LS_COLORS/LS_COLORS)
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-fzy/zsh-fzy.plugin.zsh
-source ~/.zsh/z/z.sh
-
 # Keys
 
 bindkey -e
@@ -144,6 +136,14 @@ _virtualenv_auto_activate () {
 }
 chpwd_functions+=(_virtualenv_auto_activate)
 _virtualenv_auto_activate
+
+# Plugins
+
+eval $(dircolors -b ~/.zsh/LS_COLORS/LS_COLORS)
+source ~/.zsh/z/z.sh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-fzy/zsh-fzy.plugin.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Local Variables:
 # mode: sh
