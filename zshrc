@@ -11,16 +11,7 @@ typeset -g POWERLEVEL9K_TIME_VISUAL_IDENTIFIER_EXPANSION=
 typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=2
 typeset -g POWERLEVEL9K_VIRTUALENV_SHOW_PYTHON_VERSION=true
 typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir prompt_char)
-typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
-  status
-  command_execution_time
-  background_jobs
-  kubecontext
-  gcloud
-  virtualenv
-  time
-)
-
+typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs kubecontext gcloud virtualenv time)
 
 HISTFILE="$HOME/.zhistory"
 HISTSIZE=10000000
@@ -147,9 +138,8 @@ zstyle ':completion:*:*:kill:*' insert-ids single
 # Utilities
 
 _virtualenv_auto_activate () {
-  emulate -L zsh
-  setopt extendedglob
-  activate=((Y../)#.venv/bin/activate(N:a))
+  emulate -L zsh -o extendedglob
+  activate=((../)#.venv/bin/activate(Y1N:a))
   [[ -n "$VIRTUAL_ENV" && "${activate:h:h}" != "$VIRTUAL_ENV" ]] && deactivate
   [[ -z "$VIRTUAL_ENV" && -n "$activate" ]] && source "$activate"
 }
