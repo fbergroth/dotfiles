@@ -140,6 +140,7 @@ zstyle ':completion:*:*:kill:*' insert-ids single
 _virtualenv_auto_activate () {
   emulate -L zsh -o extendedglob
   activate=((../)#.venv/bin/activate(Y1N:a))
+  [[ -n "$VIRTUAL_ENV" && -z $functions[deactivate] ]] && unset VIRTUAL_ENV
   [[ -n "$VIRTUAL_ENV" && "${activate:h:h}" != "$VIRTUAL_ENV" ]] && deactivate
   [[ -z "$VIRTUAL_ENV" && -n "$activate" ]] && source "$activate"
 }
