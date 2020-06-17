@@ -53,6 +53,7 @@ alias lr='ll -R'
 alias ..='cd ..'
 alias df='df -kh'
 alias du='du -kh'
+alias o='xdg-open'
 
 # Completion
 
