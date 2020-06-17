@@ -8,6 +8,7 @@
 - link:
     ~/.config/git/config: git/config
     ~/.config/git/ignore: git/ignore
+    ~/.config/pycodestyle: pycodestyle
 
     ~/.ipython/profile_default/ipython_config.py: ipython/ipython_config.py
 
